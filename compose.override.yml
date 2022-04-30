@@ -1,0 +1,13 @@
+services:
+  app:
+    ports:
+      - 3110:3000
+    environment:
+      - DATABASE_HOST=db
+      - DATABASE_USERNAME=root
+      - DATABASE_PASSWORD=password
+  db:
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - 33306:3306
